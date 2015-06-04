@@ -71,7 +71,8 @@ class WordProblemTest < Minitest::Test
   def test_add_then_multiply
     skip
     question = 'What is -3 plus 7 multiplied by -2?'
-    assert_equal(-8, WordProblem.new(question).answer)
+    assert_equal(-8, WordProblem.new(question).answer,
+                 'Order of operations should be as "spoken", not PEMDAS.')
   end
 
   def test_divide_twice
